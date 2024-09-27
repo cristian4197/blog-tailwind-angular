@@ -1,0 +1,17 @@
+.form {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.icon-search {
+  cursor: pointer;
+  font-family: "WebSymbolsRegular";
+  position: absolute;
+  right: 0px;
+  top: 0;
+  border: 1px solid rgb(209 213 219);
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}

@@ -1,0 +1,26 @@
+<header class="header-blog"
+            >
+  <div class="header-container">
+    <div class="logo flex-1 tablet:mx-auto">
+      <div class="header-container-logo group">
+        <span class="header-logo
+                    group-hover:animate-[spin_0s]
+                    group-hover:animate-from-bellow
+                    ">S</span>
+        <h3 class="header-logo-title
+                  group-hover:animate-from-right">Tailwind</h3>
+      </div>
+    </div>
+
+    <nav class="flex-1 tablet:mx-auto">
+      <ul class="header-nav-ul">
+        @for (menu of menuItems; track $index) {
+          <li class="menu-item">
+            <a class="menu-item-a" href="">{{menu.name}}</a>
+          </li>
+        }
+      </ul>
+    </nav>
+  </div>
+
+</header>

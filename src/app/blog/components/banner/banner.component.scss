@@ -1,0 +1,24 @@
+@media (max-width: 767.98px) {
+  @keyframes showBannerText {
+    0% {
+      transform: translateX(-600%) scale(2.5); /* Escala ajustada */
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(600%) scale(2.5);
+      opacity: 1;
+    }
+    75% {
+      transform: translateX(-600%) scale(2.5);
+      text-shadow: none;
+      color: transparent;
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0%) scale(1);
+      text-shadow: 2px 2px 1px black;
+      color: white;
+      opacity: 1;
+    }
+  }
+}

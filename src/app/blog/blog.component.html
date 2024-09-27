@@ -1,0 +1,24 @@
+<app-header></app-header>
+<!-- Inicio Sección de Información -->
+<section class="w-11/12 mx-auto">
+  <app-banner></app-banner>
+  <div class="container-cards flex flex-wrap justify-between tablet:grid tablet:grid-cols-3 phone:flex-col">
+    @for (course of courses; track $index) {
+      <app-card class="card group" [logo]="course.logo" [title]="course.title" [description]="course.description"></app-card>
+    }
+  </div>
+
+</section>
+
+<!-- Contenido Principal -->
+
+<main class="container mx-auto w-11/12 mt-5 flex flex-row">
+  <app-aside class="container-aside"></app-aside>
+  <section class="section-articles">
+    <h2 class="section-articles-title">Ultimos Articulos</h2>
+    <app-articles class="container-card">
+      </app-articles>
+  </section>
+</main>
+
+<app-footer></app-footer>

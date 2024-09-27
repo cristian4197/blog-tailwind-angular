@@ -1,0 +1,498 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+    /* body {
+      background-image: url('/assets/images/pattern.png');
+    } */
+
+    /*FUENTES*/
+    @font-face{
+      font-family: "TrebuchetMS";
+      src: url('/assets/fonts/TrebuchetMS.ttf');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face{
+      font-family: "BebasNeue";
+      src: url('/assets/fonts/BebasNeue.otf');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face{
+      font-family: "WebSymbolsRegular";
+      src: url('/assets/fonts/websymbols-regular-webfont.eot');
+      src: url('/assets/fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+          url('/assets/fonts/websymbols-regular-webfont.woff') format('woff'),
+          url('/assets/fonts/websymbols-regular-webfont.ttf') format('truetype'),
+          url('/assets/fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    .symbol {
+      font-family: "WebSymbolsRegular";
+    }
+
+    .bebas {
+      font-family: "BebasNeue";
+    }
+
+    .trebuchet {
+      font-family: "TrebuchetMS";
+    }
+
+}
+
+
+@layer components {
+  .header-blog {
+    @apply
+      
+      h-20
+      tablet:h-36
+      phone:h-52
+      bg-black
+      bebas
+      text-white;
+  }
+
+  .header-container {
+    @apply
+      container
+      w-11/12
+      mx-auto
+      flex
+      flex-row
+      tablet:flex-col
+      phone:flex-col;
+  }
+
+  .header-container-logo {
+    @apply
+    w-64
+    pt-0.5
+    pb-0.5
+    mt-4
+    ml-6
+    phone:ml-0
+    tablet:ml-0
+    text-center
+    tracking-wider
+    cursor-pointer
+    overflow-hidden
+    transition
+    duration-300
+    rounded-sm
+    bg-blue-light
+    hover:text-black
+    hover:bg-gray-200
+  }
+
+  .header-logo {
+    @apply
+      symbol
+      block
+      float-left
+      text-3xl
+      mt-1
+      ml-11
+      animate-spin-slow;
+  }
+
+  .header-logo-title {
+    @apply
+      block
+      float-right
+      text-4xl
+      mt-1.5
+      mr-16
+      transition
+      duration-100;
+  }
+
+  .header-nav-ul {
+    @apply
+      flex
+      flex-row
+      phone:flex-col
+      h-20
+      items-center
+      justify-center
+      text-2xl
+      mr-6
+      phone:m-0
+      phone:mt-8
+      tablet:m-0
+      desktop:justify-end;
+  }
+
+  /* Creas una clase con una lista de clases de tailwind */
+  .menu-item {
+    @apply
+     mr-5
+     ml-5
+     tracking-wider
+     tablet:flex-1;
+  }
+
+  .menu-item-a {
+    @apply
+    block
+    transition
+    duration-200
+    hover:text-blue-light
+    transform
+    hover:scale-125;
+  }
+
+  .text-banner {
+    font-family: "BebasNeue";
+    text-shadow: 2px 2px 1px black;
+  }
+
+  .card {
+    @apply
+      flex-1
+      tablet:flex-grow
+      h-72
+      border-2
+      border-gray-200
+      shadow-md
+      bg-white
+      overflow-hidden
+      m-5
+      pl-5
+      pr-5
+      tablet:p-0
+      cursor-pointer
+      hover:bg-black
+      transition
+      duration-300
+  }
+
+  .card-icon {
+    font-family: "WebSymbolsRegular";
+    @apply
+      block
+      w-full
+      h-32
+      text-5xl
+      text-center
+      mt-12
+      mx-auto
+      transition
+      duration-300;
+  }
+
+  .card-title {
+    @apply
+      w-full
+      h-12
+      text-xl
+      font-bold
+      text-center
+      text-blue-dark
+      transition
+      duration-300;
+  }
+
+  .card-description {
+    font-family: "TrebuchetMS";
+    @apply
+      text-center
+      text-blue-dark
+      text-base
+      transition
+      duration-300
+      phone:mb-3;
+  }
+
+  .container-aside {
+    @apply
+      flex-none
+      order-2
+      w-72
+      min-h-full;
+  }
+
+  .section-articles {
+    @apply
+      flex-grow 
+      order-1
+      mr-10;
+  }
+  
+  .section-articles-title {
+    font-family: "BebasNeue";
+    background-image: url('/assets/images/pxgray.png');
+    @apply
+      block
+      bebas
+      w-full
+      h-20
+      text-center
+      text-4xl
+      font-medium
+      tracking-widest
+      pt-5
+      border
+      shadow-header3D;
+  }
+
+  .container-card {
+    @apply
+      block
+      w-full
+      h-auto
+      border
+      border-gray-200
+      m-10
+      mx-auto
+      p-2.5
+      bg-white
+      text-black
+      shadow-md;
+  }
+
+  .card-article-label {
+    @apply
+      float-right
+      bg-gray-800
+      h-10
+      leading-7
+      p-1
+    text-white
+      -m-2.5
+      text-sm
+      rounded-bl-lg;
+  }
+
+  .card-article-title {
+    @apply
+      block
+      text-2xl
+      m-1;
+  }
+
+  .card-article-title-a {
+    @apply
+      font-semibold
+    text-blue-dark
+      hover:underline;
+  }
+
+  .card-article-description {
+    @apply
+      block
+      mt-3
+      mb-3
+      text-base
+      font-sans
+      font-normal;
+  }
+
+  .aside-title-cards {
+    font-family: "BebasNeue";
+    background-image: url('/assets/images/pxgray.png');
+    @apply
+      bebas
+      block
+      h-11
+      leading-10
+      text-3xl
+      font-medium
+      tracking-widest
+      pl-3.5
+      pt-1
+      mb-3.5
+      border
+      shadow-header3D;
+  }
+
+  .aside-input-search {
+    @apply
+      w-64
+      border
+      border-gray-300
+      rounded-lg
+      focus:outline-none
+      focus:border-blue-500
+      focus:ring-2
+      focus:ring-blue-500
+      transition
+      duration-200;
+  }
+
+  .label-login-form {
+    @apply
+      symbol
+      text-center
+      absolute
+      ml-7
+      mt-1
+      h-8;
+  }
+
+  .input-login-form {
+    @apply
+      block
+      mx-auto
+      w-10/12
+      h-8
+      border
+      border-gray-300
+      shadow-inner
+      pl-7
+      rounded-md
+      text-gray-500
+      transition
+      duration-300
+      outline-none
+      focus:outline-none
+      focus:text-gray-600;
+  }
+
+  .btn-login-form {
+    @apply
+      trebuchet
+      w-24
+      h-8
+      mt-5
+      ml-5
+      mb-5
+      text-center
+      text-white
+      text-base
+      font-light
+      border
+      border-blue-dark
+      bg-gradient-to-b from-blue-light to-blue-dark
+      rounded-none
+      cursor-pointer
+      transition
+      duration-300
+      hover:shadow-md;
+  }
+
+  .link-login-form {
+    @apply
+      block
+      w-full
+      text-sm
+      ml-5
+      text-gray-600
+      hover:underline
+      hover:text-blue-dark;
+  }
+
+  .card-media-logo {
+    @apply
+      symbol
+      block
+      text-gray-700
+      text-3xl
+      mt-3
+      mb-5
+      ml-5;
+  }
+
+  .card-media-description {
+    @apply
+      block
+      absolute
+      h-10
+      pl-2
+      pr-2
+      pt-1
+      ml-16
+      -mt-14
+      font-sans
+      font-bold
+      text-gray-700
+      tracking-wide
+      shadow-md
+      border-4
+      border-white
+      bg-gray-100
+      opacity-0
+      transition
+      duration-500
+      transform
+      -translate-x-3/4;
+  }
+
+  .footer {
+    @apply
+      bg-black
+      h-96
+      grid
+      grid-cols-3
+  }
+
+  .footer-title-section {
+    @apply
+    bebas
+     border
+     border-gray-100
+     rounded-md
+     w-60
+     h-10
+     mx-auto
+     bg-gray-100
+     text-black
+     text-3xl
+     text-center
+  }
+
+  .footer-links {
+    @apply
+    flex
+    flex-col
+    mx-auto
+    w-60;
+  }
+
+  .footer-link {
+    @apply flex items-center;
+  }
+
+  .footer-link-text {
+    @apply 
+    text-2xl
+    text-blue-dark
+    hover:underline
+    
+  }
+
+  .bullet {
+    @apply
+    text-3xl 
+    mr-4; /* Margen entre la viñeta y el texto */
+  }
+
+  .footer-hr {
+    @apply
+      w-48
+      ml-6
+      mt-2;
+  }
+
+  .footer-map {
+    @apply
+    w-full   /* Asegura que el contenedor ocupe todo el ancho disponible */
+    h-64     /* Altura fija o puedes usar max-height en lugar de height */
+    overflow-hidden; /* Oculta cualquier desbordamiento del iframe */
+  }
+
+  .footer-map iframe {
+    @apply
+      w-full   /* El iframe ocupará el 100% del ancho del contenedor */
+      h-full   /* El iframe ocupará el 100% de la altura del contenedor */
+      object-cover; /* Asegura que el contenido del iframe se ajuste correctamente al contenedor */
+  }
+}
